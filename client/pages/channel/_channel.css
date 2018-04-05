@@ -1,0 +1,160 @@
+body.is-channel .container {
+  width: 100%;
+}
+
+.sidebar,
+.conversation {
+  position: fixed;
+  top: 52px;
+  bottom: 0;
+  height: 100%;
+}
+
+.sidebar h5 {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: darken( #1B9EDB, 20% );
+  margin: 0;
+}
+
+.sidebar {
+  left: 0;
+  width: 250px;
+  background: #1B9EDB;
+  padding: 20px;
+}
+
+.sidebar ul {
+  margin: 10px 0 0 -20px;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar ul:not( :last-child ) {
+  margin-bottom: 20px;
+}
+
+.sidebar li {
+  font-size: 15px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 5px 10px 5px 20px;
+  border-radius: 0 3px 3px 0;
+  color: lighten( #1B9EDB, 40% );
+  text-decoration: none;
+  border-left: none;
+}
+
+.sidebar a:hover {
+  background: darken( #1B9EDB, 10% );
+}
+
+.sidebar .active a,
+.active a:hover {
+  background: #fff;
+  color: #1B9EDB;
+  border-left: none;
+}
+
+.sidebar .active a,
+.active a:hover .unread {
+    background: #1B9EDB;
+    color: #fff;
+}
+
+.sidebar a .unread {
+  position: relative;
+  top: 2px;
+  float: right;
+  background: #fff;
+  color: #1B9EDB;
+  font-size: 11px;
+  font-weight: bold;
+  width: 25px;
+  text-align: center;
+  padding: 1px 0 2px;
+  border-radius: 30px;
+}
+
+
+.conversation {
+  left: 250px;
+  width: calc( 100% - 250px );
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.conversation .message-input {
+  background: #fff;
+  position: absolute;
+  bottom: 52px;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.conversation .message-input input {
+  display: block;
+  width: 100%;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  height: 40px;
+  padding: 5px 10px;
+}
+
+.conversation .message-input input:focus {
+  outline: 0;
+  border-color: #ddd;
+}
+
+.conversation #messages {
+  display: flex;
+  overflow: auto;
+  height: calc( 100% - 122px );
+  background: #fff;
+  padding: 20px 20px 0;
+}
+
+.conversation .messages-list {
+  width: 100%;
+  max-height: 100%;
+  align-self: flex-end;
+  opacity: 1;
+}
+.messages-list .loading-list {
+  opacity: 0;
+}
+
+.conversation .messages-list .message:not( :last-child ),
+.messages-list svg {
+  margin-bottom: 15px;
+}
+
+.conversation .messages-list .message:last-child {
+  margin-bottom: 20px;
+}
+
+.conversation .message header h4 {
+  font-size: 14px;
+}
+
+.conversation .message header h4 span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #888;
+}
+
+.conversation .message > *:first-child,
+.message > header > *:first-child {
+  margin-top: 0px;
+}
+
+.conversation .message > *:last-child,
+.message > .body > *:last-child {
+  margin-bottom: 0px;
+}
