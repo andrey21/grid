@@ -1,0 +1,17 @@
+<template name="default">
+    {{>header}}
+    <div class="container">
+        {{#if loggingIn}}
+        {{else}}
+        {{#if authenticated}}
+            {{#unless redirectAuthenticated}}
+            {{> Template.dynamic template=yield}}
+            {{/unless}}
+        {{else}}
+            {{#unless redirectPublic}}
+            {{> Template.dynamic template=yield}}
+            {{/unless}}
+        {{/if}}
+        {{/if}}
+    </div>
+</template>
