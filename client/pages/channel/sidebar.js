@@ -1,4 +1,4 @@
-Template.sidebar.onRendered( () => {
+Template.sidebar.onCreated( () => {
     let template = Template.instance();
     template.subscribe( 'sidebar' );
   });
